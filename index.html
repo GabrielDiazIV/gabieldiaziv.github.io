@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Gabriel Diaz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link id="page_style" rel="stylesheet" href="styles/terminal.css">
+</head>
+
+<body>
+<div id="layout1">
+
+  <div id="terminal">
+    <a id="past_commands"></a>
+  </div>
+  <div id="command" onclick="document.getElementById('texter').focus();">
+    <textarea 
+      type="text"
+      id="texter"
+      autofocus
+    ></textarea>
+    <div id="liner">
+      <span id="typer"></span><b class="cursor" id="cursor">B</b>
+    </div>
+  </div>
+</div>
+<div id="layout2">
+
+  <div id="modal">
+    <div class='modal-header'>
+      <div id='modal-filename'style="background-color: blue;">Filename.html</div>
+      <button class="button" onclick="exit(event)">&times;</button>
+    </div>
+    
+    <textarea id="modal_text"></textarea>
+  </div>
+
+  <div class="grid">
+    <div class="row">
+      <div class="item" ondrop="drop(event)"  ondragover="allowDrop(event)">
+        <div id="whois" ondblclick="edit(event, 'whois')" class="file">
+          <img src="static/resume.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div>whois.html</div>
+      </div>
+      </div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="projects" ondblclick="edit(event, 'projects')" class="file">
+          <img src="static/projects.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div>projects.html</div>
+      </div>
+      </div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="work" ondblclick="edit(event, 'work')" class="file">
+          <img src="static/work.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div>work.html</div>
+      </div>
+      </div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="service" ondblclick="edit(event, 'service')" class="file">
+          <img src="static/service.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div>service.html</div>
+      </div>
+    </div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="quals" ondblclick="edit(event, 'quals')" class="file">
+          <img src="static/quals.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div class="label">quals.html</div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="neogabe" ondblclick="edit(event, 'neogabe')" class="file">
+          <img src="static/neogabe.svg"  draggable="true" ondragstart="drag(event)" width="80" height="80">
+          <div class="label">neogabe.html</div>
+      </div>
+    </div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="row">
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="row">
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="row">
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div class="item snailhome">
+        <div class="bubble bubble-bottom-left" onclick="snailText()" id="bubble">click me!</div>
+        <img src="static/snail.gif" onclick="snailText()" width="200" height="100">
+      </div>
+    </div>
+  </div>
+
+  <div id="nav-bar">
+    <button class="button" id="gsh" onclick="style_terminal()"><img class="icon" src="static/terminal.svg">gsh</button>
+    <button class="button" onclick="mail()"><img class="icon" src="static/mail.svg">mail</button>
+    <div id="clock">
+      <img id="cal"src="static/calendar.svg"/>
+      <div id="time">4:20 PM</div>
+    </div>
+  </div>
+</div>
+
+<script src="src/commands.js"></script>
+<script src="src/gui.js"></script>
+<script src="src/terminal.js"></script> 
+<script src="src/main.js"></script>
+</body>
+</html>
+
